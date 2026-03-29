@@ -9,10 +9,113 @@ To implement customer segmentation using K-Means clustering on the Mall Customer
 2. Anaconda – Python 3.7 Installation / Jupyter notebook
 
 ## Algorithm
-1. 
-2. 
-3. 
-4. 
+
+1. **Start**
+
+2. **Import Libraries**
+
+   * Import required libraries:
+
+     * `pandas`
+     * `matplotlib`, `seaborn`
+     * `KMeans`
+     * `StandardScaler`
+     * `silhouette_score`
+
+3. **Load Dataset**
+
+   * Read dataset `CustomerData.csv` into a DataFrame
+   * Display:
+
+     * First few rows (`head()`)
+     * Column names
+
+4. **Select Features**
+
+   * Choose relevant features:
+
+     * `Age`
+     * `Annual Income (k$)`
+     * `Spending Score (1-100)`
+   * Store in variable `X`
+
+---
+
+### **Data Preprocessing**
+
+5. **Feature Scaling**
+
+   * Initialize `StandardScaler`
+   * Transform features to scaled values
+   * Store as `X_scaled`
+
+---
+
+### **Find Optimal Number of Clusters (Elbow Method)**
+
+6. **Initialize WCSS List**
+
+   * Create empty list `wcss`
+
+7. **Compute WCSS for Different Clusters**
+
+   * For `i` from 1 to 10:
+
+     * Apply KMeans with `n_clusters = i`
+     * Fit model on `X_scaled`
+     * Store inertia (WCSS) in list
+
+8. **Plot Elbow Graph**
+
+   * Plot number of clusters vs WCSS
+   * Identify optimal number of clusters (elbow point)
+
+---
+
+### **Model Training**
+
+9. **Choose Optimal Clusters**
+
+   * Set number of clusters (e.g., 4)
+
+10. **Apply K-Means**
+
+* Initialize KMeans with chosen clusters
+* Fit model on `X_scaled`
+
+11. **Assign Cluster Labels**
+
+* Add cluster labels to dataset as new column `Cluster`
+
+---
+
+### **Model Evaluation**
+
+12. **Calculate Silhouette Score**
+
+* Compute silhouette score to evaluate clustering quality
+* Display score
+
+---
+
+### **Visualization**
+
+13. **Plot Clusters**
+
+* Create scatter plot:
+
+  * X-axis → Annual Income
+  * Y-axis → Spending Score
+  * Color → Cluster labels
+* Add title, labels, and legend
+
+14. **Display Plot**
+
+---
+
+15. **End**
+
+---
 
 ## Program:
 ```
