@@ -111,8 +111,6 @@ To implement customer segmentation using K-Means clustering on the Mall Customer
 
 14. **Display Plot**
 
----
-
 15. **End**
 
 ---
